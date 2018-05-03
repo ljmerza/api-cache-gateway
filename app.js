@@ -17,7 +17,7 @@ const mojoPort = `3${myPort}`; // set mojo to this port
 const cachedTimeout = 3000; // timeout to set if we already have cached response
 
 const corsOptions = {
-	origin: `http://m5devacoe01.gcsc.att.com:${myPort}`,
+	origin: `:${myPort}`,
 	optionsSuccessStatus: 200,
 	credentials: true
 }
