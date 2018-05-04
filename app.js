@@ -14,7 +14,7 @@ const myPort = 8173;
 // ProxyPass "28173/" "http://localhost:58173/UD-ember/"
 const expressPort = `2${myPort}`;
 const mojoPort = `3${myPort}`; // set mojo to this port
-const cachedTimeout = 3000; // timeout to set if we already have cached response
+const cachedTimeout = 15000; // timeout to set if we already have cached response
 
 const corsOptions = {
 	origin: `:${myPort}`,
@@ -52,7 +52,7 @@ function buildRequestOptions(expressRequest, timeout){
 
 const app = express();
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors(corsOptions));
 
 
